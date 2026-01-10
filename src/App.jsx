@@ -35,11 +35,10 @@ function App() {
                             <div key={book.isbn} className="card">
                                 {book.image && (
                                     <img
-                                        src={`/images/${book.image}`}
+                                        src={book.image}
                                         alt={book.title}
                                         className="card-img"
                                     />
-
                                 )}
                                 <h2 className="card-title">{book.title}</h2>
                                 <p className="card-text">Author: {book.author}</p>
@@ -56,6 +55,7 @@ function App() {
                                 </button>
                             </div>
                         ))}
+
                     </div>
                 )}
             </div>

@@ -1,24 +1,36 @@
+import book1 from "../../assets/book1.jpg";
+import book2 from "../../assets/book2.jpg";
+import book3 from "../../assets/book3.jpg";
+import book4 from "../../assets/book4.jpg";
+import book5 from "../../assets/book5.jpg";
+import book6 from "../../assets/book6.jpg";
+import book7 from "../../assets/book7.webp";
+import book8 from "../../assets/book8.jpg";
+import book9 from "../../assets/book9.jpg";
+import book10 from "../../assets/book10.jpg";
+
+
 export const initBooks = [
     {
         "title": "War and Peace",
         "author": "Leo Tolstoy",
         "isbn": "9780140447934",
         "price": 19.99,
-        "image": "1.jpg"
+        image: book1
     },
     {
         "title": "Crime and Punishment",
         "author": "Fyodor Dostoevsky",
         "isbn": "9780140449136",
         "price": 15.50,
-        "image": "2.jpg"
+        image: book2
     },
     {
         "title": "Anna Karenina",
         "author": "Leo Tolstoy",
         "isbn": "9780143035008",
         "price": 17.75,
-        "image": "3.jpg"
+        image: book3
 
     },
     {
@@ -26,48 +38,48 @@ export const initBooks = [
         "author": "Ivan Turgenev",
         "isbn": "9780140441475",
         "price": 12.90,
-        "image": "4.jpg"
+        image: book4
     },
     {
         "title": "The Master and Margarita",
         "author": "Mikhail Bulgakov",
         "isbn": "9780141180144",
         "price": 16.99,
-        "image": "5.jpg"
+        image: book5
     },
     {
         "title": "Eugene Onegin",
         "author": "Alexander Pushkin",
         "isbn": "9780140448030",
         "price": 11.25,
-        "image":"6.jpg"
+        image: book6
     },
     {
         "title": "The Three Musketeers",
         "author": "Alexandre Dumas",
         "isbn": "9780140449266",
         "price": 13.40,
-        "image": "7.webp"
+        image: book7
     },
     {
         "title": "The Adventures of Tom Sawyer",
         "author": "Mark Twain",
         "isbn": "9780143039563",
         "price": 12.30,
-        "image": "8.jpg"
+        image: book8
     },
     {
         "title": "Pride and Prejudice",
         "author": "Jane Austen",
         "isbn": "9780141439518",
         "price": 14.80,
-        "image": "9.jpg"
+        image: book9
     },
     {
         "title": "Great Expectations",
         "author": "Charles Dickens",
         "isbn": "9780141439563",
         "price": 15.20,
-        "image": "10.jpg"
+        image: book10
     }
 ]
