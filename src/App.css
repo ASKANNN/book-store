@@ -1,144 +1,193 @@
 .app-bg {
-  min-height: 100vh;
-  width: 100%;
-  background-image: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1950&q=80');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .overlay {
-  width: 100%;
-  min-height: 100vh;
-  background-color: rgba(0,0,0,0.5);
-  backdrop-filter: blur(5px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
 }
 
 .flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .flex-col-center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+
 .app-title {
-  font-family: 'Georgia', serif;
-  font-size: 4rem;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-  margin-bottom: 3rem;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    font-family: 'Georgia', serif;
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-bottom: 3rem;
+    text-shadow:
+            0 0 2px rgba(8, 251, 216, 0.92),
+            0 0 5px rgba(0, 255, 255, 0.4),
+            0 0 10px rgba(0, 255, 255, 0.3),
+            0 0 20px rgba(0, 255, 255, 0.7);
 }
 
 .loading-text {
-  color: #ddd;
-  font-size: 1.25rem;
-  text-align: center;
+    color: #ddd;
+    font-size: 1.25rem;
+    text-align: center;
 }
+
 
 .grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  width: 100%;
-  max-width: 1400px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1400px;
 }
+
 
 .card {
-  background: linear-gradient(145deg, rgba(222,249,234,0.95), rgba(200,230,220,0.9));
-  backdrop-filter: blur(4px);
-  padding: 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 8px 25px rgba(28, 72, 246, 0.64);
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+    background: linear-gradient(145deg, rgba(222, 249, 234, 0.95), rgba(200, 230, 220, 0.9));
+    backdrop-filter: blur(4px);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 25px rgba(28, 72, 246, 0.64);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.card-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+
 .card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 30px rgba(28,90,246,0.5);
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(28, 90, 246, 0.5);
 }
 
 
 .card-title {
-  font-family: 'Georgia', serif;
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
+    font-family: 'Georgia', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.card-title.title-available {
+    color: #16a34a;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.card-title.title-out {
+    color: #ea0f0f;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
 }
 
 .card-text {
-  font-size: 1rem;
-  color: #333;
-  margin-bottom: 0.25rem;
+    font-size: 1rem;
+    color: #0818f2;
+    margin-bottom: 0.25rem;
 }
 
 .card-img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 0.5rem;
-  margin-bottom: 1rem;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
 }
 
-
 .card-price {
-  font-family: 'Courier New', monospace;
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: #4f46e5; /* Indigo */
-  margin-bottom: 0.5rem;
+    font-family: 'Courier New', monospace;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #4f46e5;
+    margin-bottom: 0.5rem;
 }
 
 .card-status.available {
-  color: #16a34a; /* green */
-  font-weight: 600;
-  margin-bottom: 0.5rem;
+    color: #16a34a;
+    transition: color 0.3s ease;
 }
 
 .card-status.out {
-  color: #dc2626; /* red */
-  font-weight: 600;
-  margin-bottom: 0.5rem;
+    color: #dc2626;
+    transition: color 0.3s ease;
 }
 
 .card-btn {
-  width: 100%;
-  padding: 0.5rem 1rem;
-  font-weight: 600;
-  color: #f4d731;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    color: #f4d731;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .card-btn.available-btn {
-  background-color: #16a34a;
+    background-color: #16a34a;
 }
 
 .card-btn.available-btn:hover {
-  background-color: #15803d;
+    background-color: #15803d;
 }
 
 .card-btn.out-btn {
-  background-color: #dc2626;
+    background-color: #dc2626;
 }
 
 .card-btn.out-btn:hover {
-  background-color: #b91c1c;
+    background-color: #b91c1c;
 }
+
+.card.sparkle {
+    box-shadow: 0 0 10px #16a34a, 0 0 20px #16a34a, 0 0 30px #16a34a;
+    animation: glowPulse 0.6s ease-out;
+}
+
+@keyframes glowPulse {
+    0% { box-shadow: 0 0 0 #16a34a; }
+    50% { box-shadow: 0 0 25px #16a34a; }
+    100% { box-shadow: 0 0 0 #16a34a; }
+}
+.star {
+    position: absolute;
+    color: #16a34a;
+    font-size: 0.8rem;
+    animation: starBounce 0.8s forwards;
+}
+
+@keyframes starBounce {
+    0% { transform: scale(0); opacity: 1; }
+    50% { transform: translateY(-20px) scale(1); opacity: 1; }
+    100% { transform: translateY(-40px) scale(0); opacity: 0; }
+}
+
