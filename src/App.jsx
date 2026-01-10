@@ -7,8 +7,7 @@ import './App.css';
 function App() {
     const dispatch = useDispatch();
     const catalog = useSelector((state) => state.catalog.items);
-
-    const [sparkleBooks, setSparkleBooks] = useState([]);
+    const [sparkleId, setSparkleId] = useState(null);
 
     useEffect(() => {
         dispatch(loadCatalog());
@@ -25,11 +24,8 @@ function App() {
 
         const toggledBook = updated.find(book => book.isbn === isbn);
         if (!toggledBook.flagOutOfStock) {
-            setSparkleBooks(prev => [...prev, isbn]);
-
-            setTimeout(() => {
-                setSparkleBooks(prev => prev.filter(id => id !== isbn));
-            }, 5000);
+            setSparkleId(isbn);
+            setTimeout(() => setSparkleId(null), 3000);
         }
     };
 
@@ -45,8 +41,7 @@ function App() {
                         {catalog.map((book) => (
                             <div
                                 key={book.isbn}
-                                className={`card ${sparkleBooks.includes(book.isbn) ? "sparkle" : ""}`}
-                                style={{ position: "relative" }}
+                                className={`card ${sparkleId === book.isbn ? "sparkle" : ""}`}
                             >
                                 {book.image && (
                                     <img
@@ -68,20 +63,8 @@ function App() {
                                     onClick={() => toggleStock(book.isbn)}
                                     className={`card-btn ${book.flagOutOfStock ? "available-btn" : "out-btn"}`}
                                 >
-                                    {book.flagOutOfStock ? "Mark Available" : "Mark Out of Stock"}
+                                    {book.flagOutOfStock ? "Available" : "Out of Stock"}
                                 </button>
-
-                                {sparkleBooks.includes(book.isbn) && (
-                                    Array.from({ length: 5 }).map((_, i) => (
-                                        <span
-                                            key={i}
-                                            className="star"
-                                            style={{ left: `${Math.random() * 80}%` }}
-                                        >
-                                            ★
-                                        </span>
-                                    ))
-                                )}
                             </div>
                         ))}
                     </div>

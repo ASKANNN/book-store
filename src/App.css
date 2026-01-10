@@ -178,16 +178,3 @@
     50% { box-shadow: 0 0 25px #16a34a; }
     100% { box-shadow: 0 0 0 #16a34a; }
 }
-.star {
-    position: absolute;
-    color: #16a34a;
-    font-size: 0.8rem;
-    animation: starBounce 0.8s forwards;
-}
-
-@keyframes starBounce {
-    0% { transform: scale(0); opacity: 1; }
-    50% { transform: translateY(-20px) scale(1); opacity: 1; }
-    100% { transform: translateY(-40px) scale(0); opacity: 0; }
-}
-
