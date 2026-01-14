@@ -63,7 +63,7 @@ function App() {
                                     onClick={() => toggleStock(book.isbn)}
                                     className={`card-btn ${book.flagOutOfStock ? "available-btn" : "out-btn"}`}
                                 >
-                                    {book.flagOutOfStock ? "Available" : "Out of Stock"}
+                                    {book.flagOutOfStock ? "Mark Available" : "Mark Out of Stock"}
                                 </button>
                             </div>
                         ))}
