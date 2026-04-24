@@ -1,4 +1,4 @@
-/**
+ /**
  * Safe reading
  * @param {string} key
  * @returns{any|null}
